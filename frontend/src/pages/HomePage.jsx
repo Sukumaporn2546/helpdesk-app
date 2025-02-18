@@ -84,11 +84,11 @@ const HomePage = () => {
                                                     "white" // กรณีที่ไม่มีการเลือก (ค่าปกติ)
                                 }
                             >
-                                <option value="null">All</option>
-                                <option value="Pending">Pending</option>
-                                <option value="Accepted">Accepted</option>
-                                <option value="Resolved">Resolved</option>
-                                <option value="Rejected">Rejected</option>
+                                <option value="null" style={{ backgroundColor: "white" }}>All</option>
+                                <option value="Pending" style={{ backgroundColor: "white" }}>Pending</option>
+                                <option value="Accepted" style={{ backgroundColor: "white" }}>Accepted</option>
+                                <option value="Resolved" style={{ backgroundColor: "white" }}>Resolved</option>
+                                <option value="Rejected" style={{ backgroundColor: "white" }}>Rejected</option>
                             </NativeSelectField>
                         </NativeSelectRoot>
                     </Field.Root>
@@ -98,8 +98,8 @@ const HomePage = () => {
                         <Field.Label mr={"5px"} w={"90px"} className='mt-2'>Sort By</Field.Label>
                         <NativeSelectRoot value={sortBy} onChange={(e) => setSortBy(e.target.value)} borderRadius="md" border={"1px"} borderColor={"#666666"} bg={"white"}>
                             <NativeSelectField bg={"white"} color={"black"} >
-                                <option value="latest">Latest</option>
-                                <option value="oldest">Oldest</option>
+                                <option value="latest" style={{ backgroundColor: "white" }}>Latest</option>
+                                <option value="oldest" style={{ backgroundColor: "white" }}>Oldest</option>
                             </NativeSelectField>
                         </NativeSelectRoot>
                     </Field.Root>
@@ -213,17 +213,17 @@ const HomePage = () => {
                                 <Field.Root style={{ display: 'flex', flexDirection: 'row' }}>
                                     <Field.Label w={"50px"} className='mt-3'>Status</Field.Label>
                                     <NativeSelectRoot
-                                        borderRadius="md" border={"1px"} borderColor={"#666666"} mt={2} w={"22%"} bg="white">
+                                        borderRadius="md" border={"1px"} borderColor={"#666666"} mt={2} w={"auto"} bg="white">
                                         <NativeSelectField
                                             value={selectedTicket.status} // ตั้งค่า value เพื่อให้แสดงค่าปัจจุบัน
                                             onChange={e => setSelectedTicket({ ...selectedTicket, status: e.target.value })} // ใช้ onChange 
                                             bg={selectedTicket.status === 'Pending' ? '#ffcd55' : selectedTicket.status === 'Accepted' ? 'green.400' : selectedTicket.status === 'Resolved' ? 'blue.400' : 'red.400'} // เปลี่ยนสีตามสถานะ
                                             color={"black"}
                                         >
-                                            <option value="Pending">Pending</option>
-                                            <option value="Accepted">Accepted</option>
-                                            <option value="Resolved">Resolved</option>
-                                            <option value="Rejected">Rejected</option>
+                                            <option value="Pending" style={{ backgroundColor: "white" }}>Pending</option>
+                                            <option value="Accepted" style={{ backgroundColor: "white" }}>Accepted</option>
+                                            <option value="Resolved" style={{ backgroundColor: "white" }}>Resolved</option>
+                                            <option value="Rejected" style={{ backgroundColor: "white" }}>Rejected</option>
                                         </NativeSelectField>
                                     </NativeSelectRoot>
                                 </Field.Root>
